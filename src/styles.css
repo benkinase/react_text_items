@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@300&family=Poppins:wght@500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+
+:root {
+  --primary-color: #fcfcfc;
+  --secondary-color: #dfdfdf;
+  --tertiary-color: #919292;
+  --quaternary-color: #ff1109;
+  --mainTransition: all 400ms linear;
+  --mainShadow: 0 2px 5px rgba(105, 101, 101, 0.5);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  background-color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  max-width: 450px;
+  margin: 4rem auto;
+  text-align: center;
+  box-shadow: var(--mainShadow);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+.search-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid var(--secondary-color);
+}
+.search-input,
+.add-button {
+  transition: var(--mainTransition);
+  border: none;
+  box-shadow: var(--mainShadow);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+.search-input {
+  flex: 2;
+  margin-right: 0.5rem;
+}
+.search-input::placeholder {
+  color: var(--secondary-color);
+}
+.search-input:focus {
+  border: 0.08rem solid var(--secondary-color);
+  outline: none;
+}
+
+.add-button {
+  flex: 1;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+.add-button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+}
+.add-button:focus {
+  outline: none;
+  border: none;
+}
+
+.items-container {
+  margin-top: 2rem;
+}
+
+.items-container ul li {
+  list-style-type: none;
+  border-bottom: 0.15rem solid var(--secondary-color);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.unavailable {
+  opacity: 0.6;
+  background-color: var(--secondary-color);
+  padding: 0.15rem 0rem;
+}
+.empty {
+  color: var(--quaternary-color);
+  animation: scaleUp 1s 0.5s forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    left: -100%;
+    transform: scale(1);
+  }
+  30% {
+    left: -60%;
+  }
+  50% {
+    left: -40%;
+    transform: scale(1.2);
+  }
+  80% {
+    left: 20%;
+  }
+  100% {
+    left: 0%;
+    transform: scale(1);
+  }
+}
