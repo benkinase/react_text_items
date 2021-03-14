@@ -1,5 +1,5 @@
-This Application was created with custom webpack configs
-To run this it:
+#This Application was created with custom webpack configs
+#To run this it:
 
 1. Download or clone and extract project folder
 2. Open project on a text editor
