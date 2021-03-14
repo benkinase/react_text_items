@@ -9,10 +9,12 @@ export default function App() {
   const [term, setTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  // load items
   useEffect(() => {
     loadData();
   }, [isLoading]);
 
+  // set state to imported text items
   function loadData() {
     setIsLoading(true);
     setItems(textItems);
@@ -28,13 +30,14 @@ export default function App() {
       id: uuidv4(),
       title: random_text,
     };
+    // set state, adding the new text
     setItems((state) => [newText, ...state]);
   }
 
-  // get search term
-  const handleChange = (e) => {
-    setTerm(e.target.value);
-    filterData(e.target.value);
+  // get search term, and filter text items
+  const handleChange = ({ target }) => {
+    setTerm(target.value);
+    filterData(target.value);
   };
 
   // filter text items by search term

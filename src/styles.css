@@ -27,6 +27,10 @@ body {
   border-radius: 0.3rem;
   padding: 1rem;
   background-color: var(--primary-color);
+  position: relative;
+  -webkit-animation: slideInLeft 1s 0.5s forwards;
+  left: -180%;
+  animation: slideInLeft 1s 1.5s forwards;
 }
 
 .search-btn-container {
@@ -93,6 +97,8 @@ body {
   animation: scaleUp 1s 0.5s forwards;
 }
 
+/*Animations*/
+/*Unavailable::empty search list*/
 @keyframes scaleUp {
   0% {
     left: -100%;
@@ -111,5 +117,23 @@ body {
   100% {
     left: 0%;
     transform: scale(1);
+  }
+}
+/*application on load*/
+@-webkit-keyframes slideInLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
   }
 }
