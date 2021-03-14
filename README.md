@@ -1,5 +1,6 @@
-#This React Application was created with custom webpack configs
-#To run this it:
+# This React Application was created with custom webpack configs
+
+# How to run it
 
 1. Download or clone and extract project folder
 2. Open project on a text editor
