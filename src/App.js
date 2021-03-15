@@ -7,7 +7,7 @@ import { textItems, textArray } from "./Texts";
 export default function App() {
   const [items, setItems] = useState([]);
   const [term, setTerm] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // load items
   useEffect(() => {
@@ -16,7 +16,6 @@ export default function App() {
 
   // set state to imported text items
   function loadData() {
-    setIsLoading(true);
     setItems(textItems);
     setIsLoading(false);
   }

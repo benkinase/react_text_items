@@ -22,15 +22,15 @@ body {
 .app {
   max-width: 450px;
   margin: 4rem auto;
+  left: -180%;
   text-align: center;
   box-shadow: var(--mainShadow);
   border-radius: 0.3rem;
   padding: 1rem;
   background-color: var(--primary-color);
   position: relative;
-  -webkit-animation: slideInLeft 1s 0.5s forwards;
-  left: -180%;
-  animation: slideInLeft 1s 1.5s forwards;
+  -webkit-animation: slideInLeft 1s 1s forwards;
+  animation: slideInLeft 1s 1s forwards;
 }
 
 .search-btn-container {
